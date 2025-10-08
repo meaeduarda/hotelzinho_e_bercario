@@ -1,0 +1,283 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #444;
+  scroll-behavior: smooth;
+}
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(8px);
+  padding: 10px 30px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo img {
+  width: 120px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color:#8C5FB3;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #FBCB9E;
+}
+
+
+.redes-sociais {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.redes-sociais a {
+  font-size: 1.6rem;
+  transition: transform 0.3s ease;
+}
+
+
+.redes-sociais a.insta {
+  color: #E1306C; 
+}
+
+.redes-sociais a.zap {
+  color: #25D366; 
+}
+
+
+.redes-sociais a:hover {
+  transform: scale(1.2);
+  opacity: 0.8;
+}
+
+/* MENU MOBILE */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .redes-sociais {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #ffeaf1;
+    width: 100%;
+    position: absolute;
+    top: 70px;
+    left: 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .social-icons {
+    display: none;
+  }
+}
+
+
+section {
+  padding: 120px 20px;
+  text-align: center;
+}
+
+
+.home {
+  background: url('/img/banner.jpg') center/cover no-repeat;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home p {
+  color: #ffffff
+}
+.home .overlay {
+  padding: 30px;
+  border-radius: 15px;
+}
+
+.home h1 {
+  color: #ffffff;
+  font-size: 2.2em;
+}
+
+/* SOBRE */
+.sobre {
+  background-color: #fff;
+}
+
+.sobre-logo {
+
+  width: 300px;
+  margin-bottom: 15px;
+}
+
+.sobre h2 {
+  color: #8C5FB3;
+  font-size: 2em;
+  margin-bottom: 15px;
+}
+
+
+
+/* Galeria */
+.section_galeria {
+  background-color: #FFF2B8;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.section_galeria h2 {
+  font-size: 2rem;
+  color: #8C5FB3;
+  margin-bottom: 10px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.section_galeria p {
+  color: #333333;
+  font-size: 1rem;
+  margin-bottom: 40px;
+}
+
+.subgaleria {
+  margin-bottom: 50px;
+}
+
+.subgaleria h3 {
+  font-size: 1.5rem;
+  color: #8C5FB3;
+  margin-bottom: 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 20px;
+  padding: 0 20px;
+}
+
+/* Responsividade */
+@media (max-width: 900px) {
+  .galeria {
+    grid-template-columns: repeat(2, 1fr); 
+  }
+}
+
+@media (max-width: 600px) {
+  .galeria {
+    grid-template-columns: 1fr; 
+  }
+}
+
+.galeria img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 0 rgba(0,0,0,0);
+}
+
+.galeria img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  cursor: pointer;
+}
+
+
+
+/* CONTATO */
+.contato {
+  background-color: #F9BDBA;
+}
+
+.contato h2{
+  color: #8C5FB3;
+}
+
+/* BOTÃO WHATSAPP */
+.btn-whatsapp {
+  display: inline-block;
+  margin-top: 20px;
+  background-color: #4cb6b6;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 12px 28px;
+  border-radius: 30px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-whatsapp:hover {
+  background-color: #3a9999;
+  transform: scale(1.05);
+}
+
+#localizacao {
+  width: 100%;
+  background-color:#AEE3F5; 
+  text-align: center;
+}
+
+#localizacao h2 {
+  font-size: 2rem;
+  color: #8C5FB3;
+  margin-bottom: 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.mapa-container {
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* FOOTER */
+footer {
+  background-color: #BEE8B1;
+  color: #8C5FB3;
+  text-align: center;
+  padding: 10px;
+}
