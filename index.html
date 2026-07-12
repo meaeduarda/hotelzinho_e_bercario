@@ -3,30 +3,40 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hotelzinho e Berçário Vovó Brytes</title>
+    <title>Hotelzinho e Berçário Vovó Brytes | Berçário e Hotelzinho Infantil em Olinda</title>
+    <meta name="description" content="Hotelzinho e Berçário Vovó Brytes em Olinda/PE. Há mais de 6 anos oferecendo berçário, hotelzinho infantil e atividades pedagógicas com segurança, carinho e desenvolvimento." />
+    <meta name="keywords" content="berçário, hotelzinho, hotelzinho infantil, creche, Olinda, Pernambuco, cuidado infantil, educação, Vovó Brytes, festa junina, São João, Copa 2026" />
+    <meta name="author" content="Maria Eduarda Cavalcanti" />
+
+    <meta property="og:title" content="Hotelzinho e Berçário Vovó Brytes | Berçário e Hotelzinho Infantil em Olinda" />
+    <meta property="og:description" content="Há mais de 6 anos oferecendo cuidado, carinho e desenvolvimento para crianças em Olinda. Berçário e hotelzinho infantil com segurança e afeto." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="img/logo.png" />
+
+    <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
+    <link rel="shortcut icon" href="favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Vovó Brytes" />
+    <link rel="manifest" href="favicon/site.webmanifest" />
     <link rel="stylesheet" href="style.css" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Quicksand:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
-
-    <script
-      src="https://kit.fontawesome.com/a076d05399.js"
-      crossorigin="anonymous"
-    ></script>
   </head>
   <body>
 
     <header>
       <nav class="navbar">
-        <div class="logo">
-          <img src="img/logo_alt.PNG" alt="Logo Vovó Brytes" />
-        </div>
+        <a href="#home" class="logo">
+          <img src="img/logo.png" alt="Logo Vovó Brytes" />
+          <span class="logo-text">Hotelzinho e Berçário<br/>Vovó Brytes</span>
+        </a>
 
         <ul class="nav-links">
           <li><a href="#home">Home</a></li>
@@ -36,117 +46,341 @@
           <li><a href="#localizacao">Localização</a></li>
         </ul>
 
-        <div class="redes-sociais">
-          <a
-            href="https://instagram.com/hotelzinhovovobrytes"
-            target="_blank"
-            class="insta"
-          >
-            <i class="fab fa-instagram"></i>
-          </a>
-          <a
-            href="https://wa.me/5581985789118?text=Olá!%20Gostaria%20de%20mais%20informações%20sobre%20o%20Hotelzinho%20e%20Berçário%20Vovó%20Brytes%20😊"
-            target="_blank"
-            class="zap"
-          >
-            <i class="fab fa-whatsapp"></i>
-          </a>
+        <div class="nav-actions">
+          <div class="redes-sociais">
+            <a href="https://instagram.com/hotelzinhovovobrytes" target="_blank" class="insta" aria-label="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://wa.me/5581985789118?text=Olá!%20Gostaria%20de%20mais%20informações%20sobre%20o%20Hotelzinho%20e%20Berçário%20Vovó%20Brytes" target="_blank" class="zap" aria-label="WhatsApp">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+          </div>
         </div>
 
-        <div class="menu-toggle" id="mobile-menu">&#9776;</div>
+        <div class="menu-toggle" id="mobile-menu" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </div>
       </nav>
     </header>
 
-    <section id="home" class="home">
-      <div class="overlay">
-        <h1>Bem-vindo ao Hotelzinho e Berçário Vovó Brytes</h1>
-        <p>Aqui cuidamos do seu maior tesouro</p>
-      </div>
-    </section>
+    <!-- HERO -->
+    <a href="https://wa.me/5581985789118?text=Olá!%20Gostaria%20de%20mais%20informações%20sobre%20o%20Hotelzinho%20e%20Berçário%20Vovó%20Brytes" target="_blank" class="home-link" id="home">
+      <picture>
+        <source media="(max-width: 768px)" srcset="img/banner_1_mobile.png" />
+        <img src="img/banner_1_desktop.png" alt="Hotelzinho e Berçário Vovó Brytes" class="home-banner" />
+      </picture>
+    </a>
 
+    <!-- SOBRE -->
     <section id="sobre" class="sobre">
-      <img
-        src="img/logo_alt.PNG"
-        alt="Logo Vovó Brytes"
-        class="sobre-logo"
-      />
-      <h2>Sobre Nós</h2>
-      <p>
-        Há mais de 6 anos, o Hotelzinho e Berçário Vovó Brytes se dedica a oferecer um ambiente acolhedor e seguro para o desenvolvimento das crianças. Aqui, unimos práticas pedagógicas de qualidade, cuidado atento e individualizado e, claro, muita diversão, garantindo que cada momento seja uma experiência de aprendizado e alegria. Nosso compromisso é proporcionar às famílias tranquilidade e confiança, sabendo que seus filhos estão em um espaço onde o carinho, o respeito e o incentivo ao crescimento se encontram todos os dias.No Vovó Brytes, aprender brincando é nossa especialidade!
-      </p> <br>
-      <p>
-        Além de auxiliar as crianças a crescerem com autonomia e segurança,
-        integramos as teorias de desenvolvimento humano às práticas pedagógicas,
-        zelando sempre por um ambiente de cuidado, acolhimento e estímulo.
-      </p>
+      <div class="container fade-up">
+        <h2 class="section-title">Sobre <span class="highlight">Nós</span></h2>
+        <p class="section-subtitle">
+          Há mais de 6 anos, o Hotelzinho e Berçário Vovó Brytes acolhe crianças com carinho, dedicação e responsabilidade. Nosso compromisso é proporcionar um ambiente seguro, acolhedor e estimulante, onde cada criança possa aprender, brincar e se desenvolver respeitando seu tempo e sua individualidade.
+        </p>
+
+        <div class="about-features">
+          <div class="feature-card fade-up">
+            <div class="feature-icon"><i class="fas fa-calendar-check"></i></div>
+            <h3>6+ Anos de Experiência</h3>
+            <p>Experiência, carinho e compromisso com o desenvolvimento infantil, conquistando diariamente a confiança das famílias.</p>
+          </div>
+          <div class="feature-card fade-up" style="animation-delay: 0.1s">
+            <div class="feature-icon"><i class="fas fa-graduation-cap"></i></div>
+            <h3>Práticas Pedagógicas</h3>
+            <p>Desenvolvemos atividades pedagógicas que estimulam a criatividade, a autonomia, a socialização e o aprendizado de forma lúdica.</p>
+          </div>
+          <div class="feature-card fade-up" style="animation-delay: 0.2s">
+            <div class="feature-icon"><i class="fas fa-shield-halved"></i></div>
+            <h3>Segurança</h3>
+            <p>Um ambiente preparado para oferecer segurança, conforto e tranquilidade para as crianças e para suas famílias.</p>
+          </div>
+          <div class="feature-card fade-up" style="animation-delay: 0.3s">
+            <div class="feature-icon"><i class="fas fa-face-smile-beam"></i></div>
+            <h3>Diversão</h3>
+            <p>Brincadeiras, descobertas e momentos especiais fazem parte da rotina das nossas crianças todos os dias.</p>
+          </div>
+        </div>
+      </div>
     </section>
 
+    <!-- DIFERENCIAIS -->
+    <section id="diferenciais" class="diferenciais">
+      <div class="container">
+        <h2 class="section-title fade-up">Por que escolher o <span class="highlight">Vovó Brytes</span>?</h2>
+        <p class="section-subtitle fade-up">
+          Cada detalhe é pensado para oferecer o melhor para o seu filho.
+        </p>
+        <div class="diferenciais-grid">
+          <div class="diferencial-item fade-up">
+            <div class="diferencial-icon"><i class="fas fa-shield-halved"></i></div>
+            <h4>Ambiente seguro e monitorado</h4>
+          </div>
+          <div class="diferencial-item fade-up" style="animation-delay: 0.05s">
+            <div class="diferencial-icon"><i class="fas fa-users"></i></div>
+            <h4>Equipe qualificada e acolhedora</h4>
+          </div>
+          <div class="diferencial-item fade-up" style="animation-delay: 0.1s">
+            <div class="diferencial-icon"><i class="fas fa-palette"></i></div>
+            <h4>Atividades pedagógicas diárias</h4>
+          </div>
+          <div class="diferencial-item fade-up" style="animation-delay: 0.15s">
+            <div class="diferencial-icon"><i class="fas fa-apple-whole"></i></div>
+            <h4>Alimentação balanceada</h4>
+          </div>
+          <div class="diferencial-item fade-up" style="animation-delay: 0.2s">
+            <div class="diferencial-icon"><i class="fas fa-bed"></i></div>
+            <h4>Berçário e hotelzinho infantil</h4>
+          </div>
+          <div class="diferencial-item fade-up" style="animation-delay: 0.25s">
+            <div class="diferencial-icon"><i class="fas fa-puzzle-piece"></i></div>
+            <h4>Desenvolvimento por meio de brincadeiras</h4>
+          </div>
+          <div class="diferencial-item fade-up" style="animation-delay: 0.3s">
+            <div class="diferencial-icon"><i class="fas fa-location-dot"></i></div>
+            <h4>Localização privilegiada em Bairro Novo – Olinda</h4>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <!-- GALERIA -->
     <section id="galeria" class="section_galeria">
-      <h2>Nossa Galeria</h2>
-      <p>
-        Ambientes amplos, coloridos e seguros, preparados para o desenvolvimento
-        e alegria das crianças.
-      </p>
+      <div class="container">
+        <h2 class="section-title fade-up">Nossa <span class="highlight">Galeria</span></h2>
+        <p class="section-subtitle fade-up">
+          Cada sorriso registra momentos de aprendizado, carinho e diversão que fazem parte da nossa rotina.
+        </p>
 
-      <div class="subgaleria">
-        <div class="galeria">
-          <img src="img/foto1.jpg" alt="Crianças sorrindo" />
-          <img src="img/foto2.jpg" alt="Crianças pintando" />
-          <img src="img/foto3.jpg" alt="Festinha com patrulha canina" />
-          <img src="img/foto4.jpg" alt="Aula de agricultura" />
-          <img src="img/foto5.jpeg" alt="Criança Brincando" />
-          <img src="img/foto6.jpg" alt="Criança Escrevendo" />
-
+        <div class="gallery-filter fade-up">
+          <button class="filter-btn active" data-filter="all">Todas</button>
+          <button class="filter-btn" data-filter="momentos">Momentos</button>
+          <button class="filter-btn" data-filter="espaco">Nosso Espaço</button>
         </div>
-      </div>
 
-   
-      <div class="subgaleria">
-        <h3>Nosso Espaço</h3>
-        <div class="galeria">
-          <img src="img/fotoespaco1.jpg" alt="Aula de agricultura" />
-          <img src="img/fotoespaco2.jpg" alt="Brinquedos e áreas coloridas" />
-          <img src="img/fotoespaco3.jpg" alt="Área externa do hotelzinho" />
+        <div class="galeria" id="galeria-grid">
+          <div class="galeria-item fade-up" data-category="momentos">
+            <img src="img/foto1.png" alt="Crianças participando de atividades recreativas no Hotelzinho e Berçário Vovó Brytes" loading="lazy" />
+            <div class="galeria-overlay">
+              <span class="galeria-caption">Momentos de Alegria</span>
+              <i class="fas fa-expand"></i>
+            </div>
+          </div>
+          <div class="galeria-item fade-up" data-category="momentos">
+            <img src="img/foto2.png" alt="Crianças desenvolvendo atividades de pintura supervisionadas por educadores" loading="lazy" />
+            <div class="galeria-overlay">
+              <span class="galeria-caption">Hora da Pintura</span>
+              <i class="fas fa-expand"></i>
+            </div>
+          </div>
+          <div class="galeria-item fade-up" data-category="momentos">
+            <img src="img/foto3.png" alt="Festinha temática com Patrulha Canina no Hotelzinho e Berçário Vovó Brytes" loading="lazy" />
+            <div class="galeria-overlay">
+              <span class="galeria-caption">Festinha Temática</span>
+              <i class="fas fa-expand"></i>
+            </div>
+          </div>
+          <div class="galeria-item fade-up" data-category="momentos">
+            <img src="img/foto4.png" alt="Crianças em aula de agricultura aprendendo sobre natureza e sustentabilidade" loading="lazy" />
+            <div class="galeria-overlay">
+              <span class="galeria-caption">Aula de Agricultura</span>
+              <i class="fas fa-expand"></i>
+            </div>
+          </div>
+          <div class="galeria-item fade-up" data-category="momentos">
+            <img src="img/foto5.png" alt="Momento de brincadeira em ambiente seguro no Hotelzinho e Berçário Vovó Brytes" loading="lazy" />
+            <div class="galeria-overlay">
+              <span class="galeria-caption">Hora da Brincadeira</span>
+              <i class="fas fa-expand"></i>
+            </div>
+          </div>
+          <div class="galeria-item fade-up" data-category="momentos">
+            <img src="img/foto6.png" alt="Criança desenvolvendo atividade de escrita com apoio de educadores" loading="lazy" />
+            <div class="galeria-overlay">
+              <span class="galeria-caption">Aprendendo a Escrever</span>
+              <i class="fas fa-expand"></i>
+            </div>
+          </div>
+          <div class="galeria-item fade-up" data-category="momentos">
+            <img src="img/foto_copa2026.png" alt="Crianças torcendo pela Seleção Brasileira durante a Copa do Mundo 2026" loading="lazy" />
+            <div class="galeria-overlay">
+              <span class="galeria-caption">Torcida verde e amarela em clima de Copa</span>
+              <i class="fas fa-expand"></i>
+            </div>
+          </div>
+          <div class="galeria-item fade-up" data-category="momentos">
+            <img src="img/foto2_copa2026.png" alt="Grupo de crianças vestidas com as cores do Brasil em clima de Copa" loading="lazy" />
+            <div class="galeria-overlay">
+              <span class="galeria-caption">Copa do Mundo 2026: dia de vestir a camisa e torcer</span>
+              <i class="fas fa-expand"></i>
+            </div>
+          </div>
+          <div class="galeria-item fade-up" data-category="momentos">
+            <img src="img/foto_danca.png" alt="Crianças dançando quadrilha durante a Festa de São João" loading="lazy" />
+            <div class="galeria-overlay">
+              <span class="galeria-caption">Quadrilha de São João</span>
+              <i class="fas fa-expand"></i>
+            </div>
+          </div>
+          <div class="galeria-item fade-up" data-category="momentos">
+            <img src="img/foto_danca2.png" alt="Cena de quadrilha junina com bandeirinhas e clima de festa" loading="lazy" />
+            <div class="galeria-overlay">
+              <span class="galeria-caption">No ritmo do São João</span>
+              <i class="fas fa-expand"></i>
+            </div>
+          </div>
+          <div class="galeria-item fade-up" data-category="momentos">
+            <img src="img/foto_danca3.png" alt="Crianças vestidas com roupas caipiras comemorando o São João" loading="lazy" />
+            <div class="galeria-overlay">
+              <span class="galeria-caption">Dança, bandeirinhas e muita diversão</span>
+              <i class="fas fa-expand"></i>
+            </div>
+          </div>
+          <div class="galeria-item fade-up" data-category="momentos">
+            <img src="img/foto_sao_joao.png" alt="Ilustração de festa junina com crianças e decoração típica" loading="lazy" />
+            <div class="galeria-overlay">
+              <span class="galeria-caption">Festa de São João</span>
+              <i class="fas fa-expand"></i>
+            </div>
+          </div>
+          <div class="galeria-item fade-up" data-category="momentos">
+            <img src="img/mesa_sao_joao.png" alt="Crianças comemorando o São João com mesa decorada" loading="lazy" />
+            <div class="galeria-overlay">
+              <span class="galeria-caption">Arraiá das crianças</span>
+              <i class="fas fa-expand"></i>
+            </div>
+          </div>
+          <div class="galeria-item fade-up" data-category="espaco">
+            <img src="img/fotoespaco1.png" alt="Espaço de atividades pedagógicas no Hotelzinho e Berçário Vovó Brytes" loading="lazy" />
+            <div class="galeria-overlay">
+              <span class="galeria-caption">Área de Atividades</span>
+              <i class="fas fa-expand"></i>
+            </div>
+          </div>
+          <div class="galeria-item fade-up" data-category="espaco">
+            <img src="img/fotoespaco2.png" alt="Ambiente colorido com brinquedos e materiais pedagógicos" loading="lazy" />
+            <div class="galeria-overlay">
+              <span class="galeria-caption">Brinquedos e Cores</span>
+              <i class="fas fa-expand"></i>
+            </div>
+          </div>
+          <div class="galeria-item fade-up" data-category="espaco">
+            <img src="img/fotoespaco3.png" alt="Área externa do Hotelzinho e Berçário Vovó Brytes para brincadeiras ao ar livre" loading="lazy" />
+            <div class="galeria-overlay">
+              <span class="galeria-caption">Área Externa</span>
+              <i class="fas fa-expand"></i>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-more" id="gallery-more">
+          <button class="btn btn-secondary gallery-toggle" id="gallery-toggle">
+            <i class="fas fa-plus"></i> Mostrar mais
+          </button>
         </div>
       </div>
     </section>
+    <div class="lightbox" id="lightbox">
+      <button class="lightbox-close" aria-label="Fechar">&times;</button>
+      <button class="lightbox-prev" aria-label="Anterior"><i class="fas fa-chevron-left"></i></button>
+      <button class="lightbox-next" aria-label="Próximo"><i class="fas fa-chevron-right"></i></button>
+      <div class="lightbox-content">
+        <img src="" alt="" id="lightbox-img" />
+        <div class="lightbox-caption" id="lightbox-caption"></div>
+        <div class="lightbox-counter" id="lightbox-counter"></div>
+      </div>
+    </div>
 
-  
+    <!-- CONTATO -->
     <section id="contato" class="contato">
-      <h2>Contato</h2>
-      <p>📍Av. Carlos de Lima Cavalcante, 30 - Bairro Novo, Olinda - PE, 53030-265</p>
-      <p>📞 (81) 98578-9118</p>
-      <p>✉️ janainaguilherme2015@gmail.com</p>
+      <div class="container">
+        <h2 class="section-title fade-up">Fale <span class="highlight">Conosco</span></h2>
+        <p class="section-subtitle fade-up">
+          Será um prazer receber sua família. Entre em contato, conheça nossa estrutura e agende uma visita.
+        </p>
 
-      <a
-        href="https://wa.me/5581985789118?text=Olá!%20Gostaria%20de%20mais%20informações%20sobre%20o%20Hotelzinho%20e%20Berçário%20Vovó%20Brytes%20😊"
-        target="_blank"
-        class="btn-whatsapp"
-      >
-        💬 Fale Conosco
-      </a>
-    </section>
+        <div class="contact-grid">
+          <div class="contact-card fade-up">
+            <div class="contact-icon"><i class="fas fa-location-dot"></i></div>
+            <h3>Endereço</h3>
+            <p>Av. Carlos de Lima Cavalcante, 30<br/>Bairro Novo, Olinda - PE<br/>CEP: 53030-265</p>
+          </div>
+          <div class="contact-card fade-up" style="animation-delay: 0.1s">
+            <div class="contact-icon"><i class="fas fa-phone"></i></div>
+            <h3>Telefone</h3>
+            <p>(81) 98578-9118</p>
+            <a href="https://wa.me/5581985789118?text=Olá!%20Gostaria%20de%20mais%20informações" target="_blank" class="contact-link">
+              <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
+          </div>
+          <div class="contact-card fade-up" style="animation-delay: 0.2s">
+            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+            <h3>E-mail</h3>
+            <p>janainaguilherme2015@gmail.com</p>
+          </div>
+          <div class="contact-card fade-up" style="animation-delay: 0.3s">
+            <div class="contact-icon"><i class="fas fa-clock"></i></div>
+            <h3>Horário</h3>
+            <p>Segunda a Sexta<br/>07:00 - 18:00</p>
+          </div>
+        </div>
 
-    <section id="localizacao">
-      <h2>Nossa Localização</h2>
-      <div class="mapa-container">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3950.9513158387795!2d-34.84889252499271!3d-8.003957892022006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ab22b70204e38f%3A0x20920a80f8c9f86c!2sHotelzinho%20e%20Ber%C3%A7%C3%A1rio%20Vov%C3%B3%20Brytes!5e0!3m2!1spt-BR!2sbr!4v1759838205586!5m2!1spt-BR!2sbr"
-          width="600"
-          height="450"
-          style="border: 0"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-        ></iframe>
+        <div class="contact-cta fade-up">
+          <a href="https://wa.me/5581985789118?text=Olá!%20Gostaria%20de%20mais%20informações%20sobre%20o%20Hotelzinho%20e%20Berçário%20Vovó%20Brytes" target="_blank" class="btn btn-primary btn-large">
+            <i class="fab fa-whatsapp"></i> Fale Conosco pelo WhatsApp
+          </a>
+        </div>
       </div>
     </section>
 
+    <!-- LOCALIZAÇÃO -->
+    <section id="localizacao" class="localizacao">
+      <div class="container">
+        <h2 class="section-title fade-up">Nossa <span class="highlight">Localização</span></h2>
+        <div class="mapa-container fade-up">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3950.9513158387795!2d-34.84889252499271!3d-8.003957892022006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ab22b70204e38f%3A0x20920a80f8c9f86c!2sHotelzinho%20e%20Ber%C3%A7%C3%A1rio%20Vov%C3%B3%20Brytes!5e0!3m2!1spt-BR!2sbr!4v1759838205586!5m2!1spt-BR!2sbr"
+            width="600"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
     <footer>
-      <p>
-        © 2025 Hotelzinho e Berçário Vovó Brytes - Todos os direitos reservados - por Maria Eduarda Cavalcanti
-      </p>
+      <div class="footer-content">
+        <div class="footer-brand">
+          <div class="footer-logo-wrap">
+            <img src="img/logo.png" alt="Logo Vovó Brytes" class="footer-logo" />
+            <span class="footer-logo-text">Hotelzinho e Berçário<br/>Vovó Brytes</span>
+          </div>
+          <p>Há mais de 6 anos oferecendo cuidado, carinho e desenvolvimento para crianças em Olinda.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Navegação</h4>
+          <a href="#home">Home</a>
+          <a href="#sobre">Sobre</a>
+          <a href="#galeria">Galeria</a>
+          <a href="#contato">Contato</a>
+        </div>
+        <div class="footer-social">
+          <h4>Redes Sociais</h4>
+          <div class="footer-social-icons">
+            <a href="https://instagram.com/hotelzinhovovobrytes" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/5581985789118" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="current-year"></span> Hotelzinho e Berçário Vovó Brytes - Todos os direitos reservados</p>
+        <p class="footer-credit">Desenvolvido por Maria Eduarda Cavalcanti</p>
+        <p class="footer-disclaimer">As imagens exibidas neste site foram publicadas com autorização dos responsáveis legais e estão disponíveis no nosso perfil do Instagram. Qualquer uso não autorizado é proibido.</p>
+        <p class="footer-privacy"><a href="politica.html">Política de Uso e Privacidade</a></p>
+      </div>
     </footer>
 
     <script src="script.js"></script>
