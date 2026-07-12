@@ -980,7 +980,6 @@ footer {
 
   .diferenciais-grid {
     grid-template-columns: repeat(2, 1fr);
-  }
     max-width: 700px;
     margin: 0 auto;
   }
