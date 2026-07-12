@@ -404,7 +404,7 @@ img {
   position: relative;
   padding: 100px 20px;
   text-align: center;
-  background: url('img/fotoespaco1.png') center/cover fixed no-repeat;
+  background: url('img/fotoespaco1.webp') center/cover fixed no-repeat;
 }
 
 .diferenciais::before {
