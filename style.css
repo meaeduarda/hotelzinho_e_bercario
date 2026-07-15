@@ -59,6 +59,18 @@ img {
   display: block;
 }
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -156,6 +168,15 @@ img {
 .btn-large {
   padding: 18px 44px;
   font-size: 1.15rem;
+}
+
+.btn-pulse {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3); }
+  50% { box-shadow: 0 4px 30px rgba(37, 211, 102, 0.6), 0 0 0 8px rgba(37, 211, 102, 0.15); }
 }
 
 /* ========================================
@@ -392,6 +413,92 @@ img {
   color: var(--text-light);
   font-size: 0.95rem;
   line-height: 1.6;
+}
+
+/* ========================================
+   DEPOIMENTOS
+======================================== */
+.depoimentos {
+  background: linear-gradient(180deg, #f0f7ff 0%, var(--white) 100%);
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.depoimentos-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.depoimento-card {
+  background: var(--white);
+  padding: 28px 24px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(43, 125, 233, 0.06);
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.depoimento-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.depoimento-stars {
+  color: #f5a623;
+  font-size: 0.85rem;
+  margin-bottom: 14px;
+  display: flex;
+  gap: 2px;
+}
+
+.depoimento-text {
+  color: var(--text);
+  font-size: 0.95rem;
+  line-height: 1.65;
+  font-style: italic;
+  margin-bottom: 18px;
+}
+
+.depoimento-author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.depoimento-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary), var(--primary-light));
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.95rem;
+  flex-shrink: 0;
+}
+
+.depoimento-author strong {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--text);
+}
+
+.depoimento-source {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.75rem;
+  color: var(--text-light);
+}
+
+.depoimento-source i {
+  color: #4285f4;
 }
 
 /* ========================================
@@ -733,7 +840,7 @@ img {
 
 .contact-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 25px;
   margin-bottom: 45px;
 }
@@ -801,6 +908,168 @@ img {
 
 .contact-cta {
   margin-top: 10px;
+}
+
+/* ========================================
+   MODAL MATRÍCULA
+======================================== */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  padding: 20px;
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-content {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 36px 28px;
+  max-width: 440px;
+  width: 100%;
+  position: relative;
+  box-shadow: var(--shadow-lg);
+  transform: translateY(20px) scale(0.97);
+  transition: transform 0.3s ease;
+}
+
+.modal-overlay.active .modal-content {
+  transform: translateY(0) scale(1);
+}
+
+.modal-close {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+  color: var(--text-light);
+  cursor: pointer;
+  line-height: 1;
+  transition: color 0.2s;
+}
+
+.modal-close:hover {
+  color: var(--text);
+}
+
+.modal-header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.modal-icon {
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 12px;
+  background: linear-gradient(135deg, var(--primary), var(--primary-light));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  color: var(--white);
+  box-shadow: 0 4px 15px rgba(43, 125, 233, 0.25);
+}
+
+.modal-header h2 {
+  font-size: 1.4rem;
+  color: var(--primary-dark);
+  margin-bottom: 4px;
+}
+
+.modal-header p {
+  color: var(--text-light);
+  font-size: 0.9rem;
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group label {
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: var(--primary-dark);
+}
+
+.form-group label i {
+  margin-right: 4px;
+  color: var(--primary);
+}
+
+.form-group input,
+.form-group select {
+  padding: 12px 16px;
+  border: 2px solid rgba(43, 125, 233, 0.15);
+  border-radius: var(--radius-md);
+  font-family: 'Quicksand', sans-serif;
+  font-size: 0.95rem;
+  color: var(--text);
+  transition: border-color 0.3s ease;
+  background: var(--white);
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.form-group input::placeholder {
+  color: #aaa;
+}
+
+.btn-whatsapp {
+  margin-top: 4px;
+}
+
+/* ========================================
+   WHATSAPP FLUTUANTE
+======================================== */
+.whatsapp-float {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 60px;
+  height: 60px;
+  background: var(--whatsapp);
+  color: var(--white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.7rem;
+  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+  z-index: 900;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 28px rgba(37, 211, 102, 0.5);
 }
 
 /* ========================================
@@ -1049,10 +1318,32 @@ footer {
     background-attachment: scroll;
   }
 
-  .diferenciais-grid {
+  .depoimentos-grid {
     grid-template-columns: 1fr;
-    max-width: 350px;
+    max-width: 400px;
     margin: 0 auto;
+  }
+
+  .diferenciais-grid {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 16px;
+    padding: 10px 0 20px;
+    max-width: none;
+    margin: 0;
+    scrollbar-width: none;
+  }
+
+  .diferenciais-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .diferencial-item {
+    flex: 0 0 100%;
+    scroll-snap-align: center;
+    min-width: 0;
   }
 
   .about-features {
@@ -1113,6 +1404,10 @@ footer {
 
   .mapa-container {
     height: 300px;
+  }
+
+  .modal-content {
+    padding: 28px 20px;
   }
 }
 

@@ -202,6 +202,52 @@ lightbox.addEventListener('touchend', (e) => {
 }, { passive: true });
 
 // ========================================
+// MODAL MATRÍCULA
+// ========================================
+const openModalBtn = document.getElementById('open-matricula');
+const closeModalBtn = document.getElementById('close-matricula');
+const modalMatricula = document.getElementById('modal-matricula');
+const formMatricula = document.getElementById('form-matricula');
+
+function openModal() {
+  modalMatricula.classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModal() {
+  modalMatricula.classList.remove('active');
+  document.body.style.overflow = '';
+}
+
+openModalBtn.addEventListener('click', openModal);
+closeModalBtn.addEventListener('click', closeModal);
+
+modalMatricula.addEventListener('click', (e) => {
+  if (e.target === modalMatricula) closeModal();
+});
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && modalMatricula.classList.contains('active')) closeModal();
+});
+
+formMatricula.addEventListener('submit', (e) => {
+  e.preventDefault();
+
+  const nome = document.getElementById('nome-pessoa').value.trim();
+  const telefone = document.getElementById('telefone-pessoa').value.trim();
+  const turno = document.getElementById('turno-interesse').value;
+
+  if (!nome || !telefone || !turno) return;
+
+  const msg = `Olá! Gostaria de matricular meu filho(a) no Hotelzinho e Berçário Vovó Brytes.%0A%0ANome: ${encodeURIComponent(nome)}%0ATelefone: ${encodeURIComponent(telefone)}%0ATurno de interesse: ${encodeURIComponent(turno)}`;
+
+  window.open(`https://wa.me/5581985789118?text=${msg}`, '_blank');
+
+  formMatricula.reset();
+  closeModal();
+});
+
+// ========================================
 // FOOTER YEAR
 // ========================================
 document.getElementById('current-year').textContent = new Date().getFullYear();
