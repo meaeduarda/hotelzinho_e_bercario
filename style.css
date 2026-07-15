@@ -332,9 +332,6 @@ img {
 
 /* ========================================
    SOBRE
-
-/* ========================================
-   SOBRE
 ======================================== */
 .sobre {
   background: var(--white);
@@ -1048,10 +1045,39 @@ footer {
     font-size: 2rem;
   }
 
+  .diferenciais {
+    background-attachment: scroll;
+  }
+
   .diferenciais-grid {
     grid-template-columns: 1fr;
     max-width: 350px;
     margin: 0 auto;
+  }
+
+  .about-features {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .feature-card {
+    padding: 25px 20px;
+  }
+
+  .feature-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 14px;
+    font-size: 1.2rem;
+  }
+
+  .feature-card h3 {
+    font-size: 1.05rem;
+  }
+
+  .feature-card p {
+    font-size: 0.88rem;
   }
 
   .contact-grid {
@@ -1091,6 +1117,32 @@ footer {
 }
 
 @media (max-width: 600px) {
+  .sobre,
+  .diferenciais {
+    padding: 60px 16px;
+  }
+
+  .feature-card {
+    padding: 20px 16px;
+  }
+
+  .feature-icon {
+    width: 44px;
+    height: 44px;
+    margin-bottom: 10px;
+    font-size: 1.05rem;
+  }
+
+  .diferencial-item {
+    padding: 22px 12px;
+  }
+
+  .diferencial-icon {
+    width: 44px;
+    height: 44px;
+    font-size: 1rem;
+  }
+
   .galeria {
     grid-template-columns: 1fr;
     gap: 14px;
