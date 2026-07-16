@@ -372,14 +372,14 @@ img {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   border: none;
   color: var(--white);
-  font-size: 1.4rem;
-  width: 44px;
-  height: 44px;
+  font-size: 1.1rem;
+  width: 36px;
+  height: 36px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -387,12 +387,12 @@ img {
   cursor: pointer;
   z-index: 10;
   transition: all 0.3s ease;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.15);
 }
 
 .hero-prev:hover,
 .hero-next:hover {
-  background: rgba(255, 255, 255, 0.45);
+  background: rgba(255, 255, 255, 0.35);
   transform: translateY(-50%) scale(1.1);
 }
 
@@ -432,9 +432,9 @@ img {
 
   .hero-prev,
   .hero-next {
-    width: 36px;
-    height: 36px;
-    font-size: 1.1rem;
+    width: 30px;
+    height: 30px;
+    font-size: 0.9rem;
   }
 
   .hero-prev { left: 10px; }
