@@ -93,14 +93,29 @@
     </header>
 
     <!-- HERO -->
-    <a href="https://wa.me/5581985789118?text=Olá!%20Gostaria%20de%20mais%20informações%20sobre%20o%20Hotelzinho%20e%20Berçário%20Vovó%20Brytes" target="_blank" class="home-link" id="home">
-      <picture>
-        <source media="(max-width: 768px)" srcset="img/banner_1_mobile.webp" />
-        <source media="(min-width: 769px)" srcset="img/banner_1_desktop.webp" />
-        <img src="img/banner_1_desktop.webp" alt="Hotelzinho e Berçário Vovó Brytes" class="home-banner" />
-      </picture>
-      <h1 class="sr-only">Hotelzinho e Berçário Infantil em Olinda - Vovó Brytes</h1>
-    </a>
+    <div class="hero-slider" id="hero-slider">
+      <a href="https://wa.me/5581985789118?text=Olá!%20Gostaria%20de%20mais%20informações%20sobre%20o%20Hotelzinho%20e%20Berçário%20Vovó%20Brytes" target="_blank" class="hero-slide active" id="home">
+        <picture>
+          <source media="(max-width: 768px)" srcset="img/banner_principal2mobile.webp" />
+          <source media="(min-width: 769px)" srcset="img/banner_principal1desktop.webp" />
+          <img src="img/banner_principal1desktop.webp" alt="Hotelzinho e Berçário Vovó Brytes" class="home-banner" />
+        </picture>
+        <h1 class="sr-only">Hotelzinho e Berçário Infantil em Olinda - Vovó Brytes</h1>
+      </a>
+      <a href="https://wa.me/5581985789118?text=Olá!%20Gostaria%20de%20mais%20informações%20sobre%20o%20Hotelzinho%20e%20Berçário%20Vovó%20Brytes" target="_blank" class="hero-slide">
+        <picture>
+          <source media="(max-width: 768px)" srcset="img/banner_1_mobile.webp" />
+          <source media="(min-width: 769px)" srcset="img/banner_1_desktop.webp" />
+          <img src="img/banner_1_desktop.webp" alt="Hotelzinho e Berçário Vovó Brytes" class="home-banner" />
+        </picture>
+      </a>
+      <button class="hero-prev" aria-label="Anterior"><i class="fas fa-chevron-left"></i></button>
+      <button class="hero-next" aria-label="Próximo"><i class="fas fa-chevron-right"></i></button>
+      <div class="hero-dots">
+        <span class="hero-dot active" data-index="0"></span>
+        <span class="hero-dot" data-index="1"></span>
+      </div>
+    </div>
 
     <!-- SOBRE -->
     <section id="sobre" class="sobre">

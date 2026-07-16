@@ -337,18 +337,113 @@ img {
 /* ========================================
    HERO
 ======================================== */
-.home-link {
-  display: block;
+.hero-slider {
+  position: relative;
+  margin-top: 55px;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.hero-slide {
+  display: none;
   text-decoration: none;
   cursor: pointer;
   line-height: 0;
-  margin-top: 55px;
 }
 
-.home-banner {
+.hero-slide.active {
+  display: block;
+  animation: heroFadeIn 0.6s ease;
+}
+
+@keyframes heroFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.hero-slide .home-banner {
   width: 100%;
   height: auto;
   display: block;
+}
+
+.hero-prev,
+.hero-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: none;
+  color: var(--white);
+  font-size: 1.4rem;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.hero-prev:hover,
+.hero-next:hover {
+  background: rgba(255, 255, 255, 0.45);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.hero-prev { left: 16px; }
+.hero-next { right: 16px; }
+
+.hero-dots {
+  position: absolute;
+  bottom: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 10;
+}
+
+.hero-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.45);
+  border: 2px solid rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.hero-dot.active {
+  background: var(--white);
+  border-color: var(--white);
+  transform: scale(1.15);
+}
+
+@media (max-width: 768px) {
+  .hero-slider {
+    margin-top: 48px;
+  }
+
+  .hero-prev,
+  .hero-next {
+    width: 36px;
+    height: 36px;
+    font-size: 1.1rem;
+  }
+
+  .hero-prev { left: 10px; }
+  .hero-next { right: 10px; }
+
+  .hero-dot {
+    width: 10px;
+    height: 10px;
+  }
 }
 
 /* ========================================

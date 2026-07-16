@@ -17,6 +17,67 @@ document.querySelectorAll('.nav-links a').forEach(link => {
 });
 
 // ========================================
+// HERO SLIDER
+// ========================================
+const heroSlider = document.getElementById('hero-slider');
+const heroSlides = heroSlider.querySelectorAll('.hero-slide');
+const heroDots = heroSlider.querySelectorAll('.hero-dot');
+const heroPrev = heroSlider.querySelector('.hero-prev');
+const heroNext = heroSlider.querySelector('.hero-next');
+let currentHeroSlide = 0;
+let heroTimer;
+
+function showHeroSlide(index) {
+  heroSlides.forEach(s => s.classList.remove('active'));
+  heroDots.forEach(d => d.classList.remove('active'));
+  heroSlides[index].classList.add('active');
+  heroDots[index].classList.add('active');
+  currentHeroSlide = index;
+}
+
+function nextHeroSlide() {
+  showHeroSlide((currentHeroSlide + 1) % heroSlides.length);
+}
+
+function startHeroTimer() {
+  heroTimer = setInterval(nextHeroSlide, 5000);
+}
+
+function resetHeroTimer() {
+  clearInterval(heroTimer);
+  startHeroTimer();
+}
+
+heroNext.addEventListener('click', () => { nextHeroSlide(); resetHeroTimer(); });
+heroPrev.addEventListener('click', () => {
+  showHeroSlide((currentHeroSlide - 1 + heroSlides.length) % heroSlides.length);
+  resetHeroTimer();
+});
+
+heroDots.forEach(dot => {
+  dot.addEventListener('click', () => {
+    showHeroSlide(parseInt(dot.dataset.index));
+    resetHeroTimer();
+  });
+});
+
+let heroTouchStartX = 0;
+heroSlider.addEventListener('touchstart', (e) => {
+  heroTouchStartX = e.changedTouches[0].screenX;
+}, { passive: true });
+
+heroSlider.addEventListener('touchend', (e) => {
+  const diff = heroTouchStartX - e.changedTouches[0].screenX;
+  if (Math.abs(diff) > 50) {
+    if (diff > 0) nextHeroSlide();
+    else showHeroSlide((currentHeroSlide - 1 + heroSlides.length) % heroSlides.length);
+    resetHeroTimer();
+  }
+}, { passive: true });
+
+startHeroTimer();
+
+// ========================================
 // NAVBAR SCROLL EFFECT
 // ========================================
 const navbar = document.querySelector('.navbar');
